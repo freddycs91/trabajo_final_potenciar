@@ -1,5 +1,5 @@
 	
-	Algoritmo hiperglucemia_diab21
+	Algoritmo hiperglucemia_diab20
 	
 	definir result como real 
 	tap<-1
@@ -8,7 +8,7 @@
 		escribir " Por favor seleccione una opcion:"
 		escribir"1- Estado de glucemia"
 		escribir"2- Factores de riesgo e informacion"
-		escribir"3- IMC"
+		escribir"3- Indice de masa corporal(IMC)"
 		escribir"4- Informacion"
 		
 		leer num
@@ -40,7 +40,7 @@
 						FinSi
 					2:
 						escribir"Glucemia al azar significa medir azucar en sangre en cualquier momento del dia, sin necesidad de estar en ayunas"
- 						escribir"Por favor ingrese el valor"
+ 						escribir"Por favor ingrese el valor en mg"
 						leer val
 						si val >= 200 entonces 
 							escribir " Ud posiblemente tenga diabetes,visite a su medico"
@@ -134,4 +134,3 @@
 		Fin Segun
 	Fin Mientras
 FinAlgoritmo
-		
