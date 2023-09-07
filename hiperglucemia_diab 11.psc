@@ -38,7 +38,7 @@
 							escribir "valores muy elevados,acorde a individuos con diabtes, por favor visite a su medico"
 						FinSi
 					2:
-						escribir"Glucemia al azar significa medir azucar en sangre en cualquier momento del dia, sin necesidad de ayunas"
+						escribir"Glucemia al azar significa medir azucar en sangre en cualquier momento del dia, sin necesidad de estar en ayunas"
  						escribir"Por favor ingrese el valor"
 						leer val
 						si val >= 200 entonces 
