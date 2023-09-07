@@ -1,4 +1,5 @@
-	Algoritmo hiperglucemia_diab20
+	
+	Algoritmo hiperglucemia_diab21
 	
 	definir result como real 
 	tap<-1
@@ -43,9 +44,16 @@
 						leer val
 						si val >= 200 entonces 
 							escribir " Ud posiblemente tenga diabetes,visite a su medico"
-						sino escribir" Esta dentro de los rangos adecuados :) "
+						sino escribir"--"
+						FinSi
+						si val  <= 140 Entonces
+							escribir "Ud se encuentra dentro de los valores normales" 
+							
 						FinSi
 						
+						si val >= 141 Y val <=  199 Entonces
+							escribir" Ud puede presenta niveles alterados de glucemia(prediabetes),visite a su medico"
+						FinSi
 						
 						
 						
@@ -126,4 +134,4 @@
 		Fin Segun
 	Fin Mientras
 FinAlgoritmo
-
+		
