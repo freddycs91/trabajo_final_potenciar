@@ -1,34 +1,33 @@
-
-	Algoritmo hiperglucemia_diab
+	Algoritmo hiperglucemia_diab20
 	
 	definir result como real 
 	tap<-1
 	Mientras tap=1 Hacer
-		escribir"bienvenidos"
-		escribir "por favor seleccione una opcion"
-		escribir"1- estado de glucemia"
-		escribir"2- factores de riesgo"
-		escribir"3-calcular IMC"
-		escribir"4- informacion"
+		escribir" Bienvenidos"
+		escribir " Por favor seleccione una opcion:"
+		escribir"1- Estado de glucemia"
+		escribir"2- Factores de riesgo e informacion"
+		escribir"3- IMC"
+		escribir"4- Informacion"
 		
 		leer num
 		
 		Segun num Hacer
-			1: escribir"marque 1 para determinar glucemia en ayunas"
+			1: escribir"Marque 1 para determinar glucemia en ayunas"
 				escribir"marque 2 para determinar glucemia al azar"
 				leer letra
 				Segun letra Hacer
 					1:
-						escribir"ingrese valor en mg"
+						escribir"Ingrese valor en mg"
 						leer num1
 						Si num1<70 Entonces
-							escribir"posiblemente tenga hipoglucemia"
+							escribir"-Posiblemente tenga hipoglucemia"
 						SiNo
 							escribir ""
 						Fin Si
 						
 						si num1>=70 Y num1<110 Entonces
-							escribir" Ud esta en los rangos adecuados"
+							escribir" Ud esta en los rangos adecuados,glucemia normal"
 						FinSi
 						
 						si num1 > 110 Y num1 < 125 Entonces
@@ -39,32 +38,39 @@
 							escribir "valores muy elevados,acorde a individuos con diabtes, por favor visite a su medico"
 						FinSi
 					2:
-						escribir"por favor ingrese el valor"
+						escribir"Glucemia al azar significa medir azucar en sangre en cualquier momento del dia, sin necesidad de ayunas"
+ 						escribir"Por favor ingrese el valor"
 						leer val
 						si val >= 200 entonces 
 							escribir " Ud posiblemente tenga diabetes,visite a su medico"
-						sino escribir" esta dentro de los rangos adecuados :) "
+						sino escribir" Esta dentro de los rangos adecuados :) "
 						FinSi
 						
 						
 						
+						
+						
 					De Otro Modo:
-						escribir"por favor seleccione una opcion adecuada"
+						escribir"Por favor seleccione una opcion adecuada"
 				Fin Segun
+				escribir"introdusca 1 para volver a menu principal o cualquer otro numero para terminar"
+				leer tap
+				limpiar pantalla
 				
-			2: escribir "Los factores de riesgo son condiciones, conductas, estilos de vida o situaciones que nos exponen a mayor riesgo de presentar una enfermedad"                                                   
-				escribir"algunos factores de riesgo de la diabetes son los siguientes:"
-				escribir"indice de masa corporal(IMC) mayor a 25"
+			2:  escribir "LOS FACTORES DE RIESGO SON CONDICIONES,CONDUCTAS,ESTILO DE VIDA O SITUACIONES QUE NOS EXPONEN A MAYOR RIESGO DE PRESENTAR UNA ENFERMEDAD"                                                   
+			    escribir "algunos factores de riesgo de la diabetes son los siguientes:"
+			    escribir "A- Indice de masa corporal(IMC) mayor a 25"
+                escribir "B- Perimetro de cintura mayor a 80cm en mujeres "
+				escribir "C- Perimetro de cintura mayor a 90cm en hombres"
+				escribir "D- Antecedentes familiares"
+				escribir "E- Antecedentes obsstetricios de diabetes gestacional"
+				escribir "F- Peso del hijo/a en gestacion mayor a 4kg"
+				escribir "G- Sedentarismo"
+				escribir "H- Hipertension arteriar"
 				
-				
-				escribir" perimetro de cintura mayor a 80cm en mujeres "
-				escribir" perimetro de cintura mayor a 90cm en hombres"
-				escribir" antecedentes familiares"
-				escribir" antecedentes obsstetricios de diabetes gestacional"
-				escribir" peso del hijo/a en gestacion mayor a 4kg"
-				escribir"sedentarismo"
-				escribir"hipertension arteriar"
-				
+				escribir"introdusca 1 para volver a menu principal o cualquer otro numero para terminar"
+				leer tap
+				limpiar pantalla
 				
 				
 				
@@ -72,12 +78,15 @@
 				
 			4: escribir" en el siguiente link se encuentra informacion precisa y detallada acerca de la biabetes" 
 				escribir" https://www.argentina.gob.ar/salud/glosario/diabetes#:~:text=Se%20estima%20que%201%20de,la%20padecen%20desconocen%20su%20condici%C3%B3n."
+				escribir"introdusca 1 para volver a menu principal o cualquer otro numero para terminar"
+				leer tap
+				limpiar pantalla
 				
 				
 			3:
 				Repetir
-					escribir "desea calcular IMC? marque 5 de lo contrario cualquier otra tecla"
-					leer sip
+					escribir "bienvenido"
+					sip<-5
 					si sip = 5 Entonces 
 						escribir "por favor introdusca su peso en kilos" 
 						leer kil
@@ -91,25 +100,30 @@
 					finsi
 					
 					si result < 18 entonces 
-						escribir"si su IMC es menor a 18 se encuentra en el rango de peso insuficiente"
+						escribir"Su IMC es menor a 18 se encuentra en el rango de peso insuficiente"
 					FinSi
 					
 					si result >= 18.5 Y result <= 24.5 
-						escribir" se encuentra dentro del rango de peso normal o saludable"
+						escribir"Se encuentra dentro del rango de peso normal o saludable"
 					fin si
 					
 					si result >= 25 Y result  <=  29.9 
-						escribir "si su IMC se encuentra dentro del rango sobrepeso" 
+						escribir "Su IMC se encuentra dentro del rango sobrepeso" 
 					finsi	
 					si result >=30 
-						escribir"si su IMC se encuentra dentro del rango obesidad "
+						escribir"Su IMC se encuentra dentro del rango obesidad "
 					FinSi
+					escribir"Intentar nuevamente?"
+					escribir"Presione 5, de lo contrario cualquer otro numero "
 					
+					leer sip
 				Hasta Que sip  <> 5
+				escribir"introdusca 1 para volver a menu principal o cualquer otro numero para terminar"
+				leer tap
+				limpiar pantalla
 				
 				
 		Fin Segun
 	Fin Mientras
 FinAlgoritmo
-
 
